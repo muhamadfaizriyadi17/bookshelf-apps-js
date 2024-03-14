@@ -30,12 +30,12 @@ function createBook(idBook, inputBookTitle, inputBookAuthor, inputBookYear, inpu
     const bookTitle = document.createElement("h5");
     bookTitle.classList.add("text-truncate");
     bookTitle.style.maxWidth = "200px";
-    bookTitle.innerText = inputBookTitle;
+    bookTitle.innerText = inputBookTitle.charAt(0).toUpperCase() + inputBookTitle.slice(1).toLowerCase();
 
     const bookAuthor = document.createElement("span");
     bookAuthor.classList.add("text-truncate", "d-inline-block");
     bookAuthor.style.maxWidth = "200px";
-    bookAuthor.innerText = inputBookAuthor;
+    bookAuthor.innerText = inputBookAuthor.charAt(0).toUpperCase() + inputBookAuthor.slice(1).toLowerCase();
 
     const bookYear = document.createElement("span");
     bookYear.innerText = inputBookYear;
@@ -79,10 +79,10 @@ function addAction(inputBookIsComplete, idBook) {
 function createActionDelete(idBook) {
     const actionDelete = document.createElement("button");
     actionDelete.classList.add("btn", "btn-sm", "btn-outline-danger", "mx-1");
-    actionDelete.innerHTML = '<i class="bi bi-x"></i>';
+    actionDelete.innerHTML = '<i class="bi bi-trash"></i>';
 
     actionDelete.addEventListener("click", function () {
-        let confirmation = confirm("apakah anda yakin ingin menghapus buku?");
+        let confirmation = confirm("Are you sure, you want to delete the book?");
 
         if (confirmation) {
             const cardParent = document.getElementById(idBook);
@@ -128,7 +128,7 @@ function createActionRead(idBook) {
 
 function createActionUndo(idBook) {
     const action = document.createElement("button");
-    action.classList.add("btn", "btn-sm", "btn-outline-secondary");
+    action.classList.add("btn", "btn-sm", "btn-outline-success");
     action.innerHTML = '<i class="bi bi-arrow-counterclockwise"></i>';
 
     action.addEventListener("click", function () {

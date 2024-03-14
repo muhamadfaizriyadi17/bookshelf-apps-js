@@ -35,6 +35,8 @@ function composeBookObject(id, title, author, year, isComplete) {
 
 function renderFromBooks() {
     for (book of books) {
+        const capitalizedTitle = book.title.charAt(0).toUpperCase() + book.title.slice(1);
+        const capitalizedAuthor = book.author.charAt(0).toUpperCase() + book.author.slice(1);
         const newBook = createBook(book.id, book.title, book.author, book.year, book.isComplete);
 
         if (book.isComplete) {

@@ -3,3 +3,24 @@
         body {
             font-family: 'Poppins';
         }
+
+        .custom-header {
+            background: #1488CC; 
+            background: -webkit-linear-gradient(to right, #2B32B2, #1488CC);
+            background: linear-gradient(to right, #2B32B2, #1488CC); 
+        }
+
+        .custom-button {
+            background: #1488CC;
+            background: -webkit-linear-gradient(to right, #2B32B2, #1488CC); 
+            background: linear-gradient(to right, #2B32B2, #1488CC); 
+        }
+
+        .custom-footer {
+            background: #1488CC;
+            background: -webkit-linear-gradient(to right, #2B32B2, #1488CC); 
+            background: linear-gradient(to right, #2B32B2, #1488CC); 
+        }
+        
+
+        
