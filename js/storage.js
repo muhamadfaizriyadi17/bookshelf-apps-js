@@ -28,6 +28,7 @@ function fetchJson() {
 }
 
 function composeBookObject(id, title, author, year, isComplete) {
+    year = parseInt(year);
     return {
         id, title, author, year, isComplete,
     };
